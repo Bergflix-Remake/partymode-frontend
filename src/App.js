@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
+import * as React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <p>Bergflix</p>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
