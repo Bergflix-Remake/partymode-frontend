@@ -5,14 +5,14 @@ function Header() {
   return (
     <div className="border-b-[1px] border-clean-dark fixed top-0 z-50 flex-row items-center hidden w-screen h-20 p-2 space-x-5 text-gray-500 sm:flex bg-darkest-dark bg-opacity-20 backdrop-blur-sm">
       <div className="ml-2"></div>
-      <Link className="link" to="/">
-        <h1 className="text-4xl font-bold cursor-pointer text-darkest-dark dark:text-white md:hidden">
+      <Link className="md:hidden" to="/">
+        <h1 className="text-4xl font-bold cursor-pointer text-darkest-dark dark:text-white ">
           Bf
           <span className="font-bold text-primary">.</span>
         </h1>
       </Link>
-      <Link className="link" to="/">
-        <h1 className="hidden text-4xl font-bold cursor-pointer text-darkest-dark dark:text-white md:block">
+      <Link className="hidden md:block" to="/">
+        <h1 className="text-4xl font-bold cursor-pointer text-darkest-dark dark:text-white ">
           Bergflix
           <span className="font-bold text-primary">.</span>
         </h1>
@@ -32,8 +32,14 @@ function Header() {
           Party
         </Link>
       </ul>
-      <div className="flex flex-row h-full ml-auto mr-8">
+      <div className="flex-1 flex-row h-full">
         {/* User Popup */}
+        <div class="flex flex-col items-end ml-auto mr-8">
+          <img
+            src="https://cdn.bergflix.de/logo/light_bg.png"
+            class="rounded-full shadow w-14 h-14 backdrop-blur-3xl"
+          />
+        </div>
       </div>
     </div>
   );
