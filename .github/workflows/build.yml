@@ -1,0 +1,30 @@
+name: Build
+on: [push]
+jobs:
+  lint:
+    name: Lint 🎨
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Lint 🚚
+        run: |
+          yarn install
+          yarn lint
+  build:
+    name: Build 🔨
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn build
+      - name: Store artifacts 📦
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          path: dist
