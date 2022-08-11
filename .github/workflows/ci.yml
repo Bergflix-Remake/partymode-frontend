@@ -34,6 +34,8 @@ jobs:
   lint:
     name: Lint 🎨
     runs-on: ubuntu-latest
+    env:
+      CI: true
     needs:
       - test
     steps:
