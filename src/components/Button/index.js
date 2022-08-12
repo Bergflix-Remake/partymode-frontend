@@ -56,7 +56,7 @@ function Button({ children, type, to }) {
   } else if (checkType === "outline") {
     return (
       <button
-        className="inline ease-in-out cursor-pointer h-min group transform transition-all rounded w-max text-white border-primary-500 hover:border-${props.color}-400 hover:bg-primary-400 border-2 p-2"
+        className="inline ease-in-out cursor-pointer h-min group transform transition-all rounded w-max text-white border-primary-500 hover:border-primary-400 hover:bg-primary-400 border-2 p-2"
         href={to}
       >
         {children}

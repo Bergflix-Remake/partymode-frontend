@@ -37,6 +37,7 @@ function Header() {
         <div class="flex flex-col items-end ml-auto mr-8">
           <img
             src="https://cdn.bergflix.de/logo/light_bg.png"
+            alt="Profile"
             class="rounded-full shadow w-14 h-14 backdrop-blur-3xl"
           />
         </div>
