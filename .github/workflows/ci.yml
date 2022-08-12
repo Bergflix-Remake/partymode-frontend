@@ -1,0 +1,50 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Install 🔽
+        run: |
+          yarn install
+      - name: Test 🧪
+        run: |
+          yarn test --passWithNoTests
+  build:
+    name: Build 🔨
+    needs:
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Install 🔽
+        run: |
+          yarn install
+      - name: Build 🔧
+        run: |
+          yarn build
+      - name: Store artifacts 📦
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          path: dist
+  lint:
+    name: Lint 🎨
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    needs:
+      - test
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Install 🔽
+        run: |
+          yarn install
+      - name: Lint 🎨
+        run: |
+          yarn lint
+    
