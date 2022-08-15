@@ -1,4 +1,5 @@
 import React from "react";
+import NavbarLink from "../NavbarLink";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -19,18 +20,18 @@ function Header() {
       </Link>
       <div className="h-5 mr-5 border-r-2 border-gray-600"></div>
       <ul className="flex flex-row space-x-10">
-        <Link className="hover:text-primary-500" to="/movies">
+        <NavbarLink className="hover:text-primary-500" to="/movies">
           Home
-        </Link>
-        <Link className="hover:text-primary-500" to="/series">
-          Movies
-        </Link>
-        <Link className="hover:text-primary-500" to="/series">
-          Series
-        </Link>
-        <Link className="hover:text-primary-500" to="/series">
+        </NavbarLink>
+        <NavbarLink className="hover:text-primary-500" to="/series">
+          Filme
+        </NavbarLink>
+        <NavbarLink className="hover:text-primary-500" to="/series">
+          Serien
+        </NavbarLink>
+        <NavbarLink className="hover:text-primary-500" to="/series">
           Party
-        </Link>
+        </NavbarLink>
       </ul>
       <div className="flex-1 flex-row h-full">
         {/* User Popup */}
