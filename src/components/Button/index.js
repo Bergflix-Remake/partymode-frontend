@@ -11,11 +11,11 @@ const types = {
     "inline ease-in-out cursor-pointer h-min group transform transition-all rounded w-max text-white border-primary-500 hover:border-primary-400 hover:bg-primary-400 border-2 p-2",
 };
 
-function Button({ children, type, ...props }) {
+function Button({ children, type, style, ...props }) {
   const checkType = Object.keys(types).includes(type) ? type : "primary";
 
   return (
-    <button className={`${types[checkType]}`} {...props}>
+    <button className={`${types[checkType]} ${style}`} {...props}>
       {children}
     </button>
   );
