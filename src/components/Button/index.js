@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 const types = {
   primary:
@@ -11,11 +12,11 @@ const types = {
     "inline ease-in-out cursor-pointer h-min group transform transition-all rounded w-max text-white border-primary-500 hover:border-primary-400 hover:bg-primary-400 border-2 p-2",
 };
 
-function Button({ children, type, _style, ...props }) {
+function Button({ children, type, className, ...props }) {
   const checkType = Object.keys(types).includes(type) ? type : "primary";
 
   return (
-    <button className={`${types[checkType]} ${_style}`} {...props}>
+    <button className={twMerge(types[checkType], className)} {...props}>
       {children}
     </button>
   );
