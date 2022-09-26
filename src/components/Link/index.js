@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLinkIcon } from "@heroicons/react/outline";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 
 function Link({ children, type, to, ...props }) {
   return (
@@ -11,7 +11,7 @@ function Link({ children, type, to, ...props }) {
       {...props}
     >
       {type === "linkout" && (
-        <ExternalLinkIcon class="inline w-6 h-6 mb-1 mr-1 group-hover:text-primary-500" />
+        <ArrowTopRightOnSquareIcon className="inline w-6 h-6 mb-1 mr-1 group-hover:text-primary-500" />
       )}
       {children}
     </a>
