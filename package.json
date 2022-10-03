@@ -5,11 +5,11 @@
   "dependencies": {
     "@heroicons/react": "^2.0.11",
     "@sentry/react": "^7.13.0",
-    "@sentry/tracing": "^7.9.0",
+    "@sentry/tracing": "^7.14.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
-    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "plyr-react": "^5.1.0",
@@ -17,7 +17,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
-    "tailwind-merge": "^1.6.0",
+    "tailwind-merge": "^1.6.1",
     "web-vitals": "^3.0.2"
   },
   "scripts": {
@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8"
   }
 }
