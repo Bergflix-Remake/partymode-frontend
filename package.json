@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@heroicons/react": "^2.0.11",
+    "@heroicons/react": "^2.0.12",
     "@sentry/react": "^7.14.1",
     "@sentry/tracing": "^7.14.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
