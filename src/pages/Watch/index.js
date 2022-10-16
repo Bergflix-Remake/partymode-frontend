@@ -1,7 +1,8 @@
 import React from "react";
 import Player from "../../components/Player";
-// import Title from "../../components/Text/Title";
+import Title from "../../components/Text/Title";
 import Subtitle from "../../components/Text/Subtitle";
+import Chat from "../../components/Chat/Chat";
 
 function Home() {
   return (
@@ -10,6 +11,10 @@ function Home() {
         {/* Player */}
         <div className="bg-clean-dark-600 w-full aspect-video md:rounded-l-lg  overflow-hidden">
           <Player />
+        </div>
+        <div className="w-full xl:w-1/3 bg-clean-dark-600 xl:rounded-bl-none xl:rounded-r-lg rounded-b-lg p-5 flex flex-col">
+          <Title>Chat</Title>
+          <Chat />
         </div>
       </div>
 
