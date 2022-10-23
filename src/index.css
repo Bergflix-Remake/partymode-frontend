@@ -6,9 +6,15 @@
 
 html,
 body,
-#root {
+:root {
   margin: 0;
   padding: 0;
+  --plyr-color-main: #f40f3a;
+}
+
+::selection {
+  background: var(--plyr-color-main);
+  color: #fff;
 }
 
 body {
