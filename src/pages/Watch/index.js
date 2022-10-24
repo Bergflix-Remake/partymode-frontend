@@ -3,6 +3,8 @@ import Player from "../../components/Player";
 import Title from "../../components/Text/Title";
 import Subtitle from "../../components/Text/Subtitle";
 import Chat from "../../components/Chat/Chat";
+import InfoRow from "../../components/InfoRow";
+import Contributor from "../../components/Contributor";
 
 function Home() {
   return (
@@ -21,27 +23,32 @@ function Home() {
       {/* Info */}
       <div className="w-full p-10 bg-clean-dark-600 rounded-lg flex md:flex-row flex-col">
         <div className="md:w-1/2 w-full">
+          {/* If Image is available*/}
           <img
             className="max-h-24"
             alt=""
             src={`https://cdn.bergflix.de/video_icons/captain_pineapple.png`}
           />
-          {/* <Title>Lorem Ipsum</Title> */}
+          {/* Else display Title*/}
+          {/* <Title>Diese verdammte Ananas!</Title> */}
+
           <p className="text-gray-500 font-light">Lorem Ipsum</p>
         </div>
         <div className="md:ml-auto mt-5">
-          {/* <InfoRow :year='2022' :age='16' genre='Action' /> */}
+          <InfoRow year={"2022"} age={"16"} genre={"Action"} />
         </div>
       </div>
       <div className="w-full p-10 bg-clean-dark-600 rounded-lg flex flex-col">
         <Subtitle>Mitwirkende</Subtitle>
         <div className="flex flex-wrap">
-          {/* <Contributor
-          v-for='contributor in movie.data?.attributes?.contributors' :key='contributor?.id'
-          :name='contributor?.contributor?.data?.attributes?.name!' :role='contributor?.role!'
-          :character='contributor?.character'
-          :image='`https://api.bergflix.de${contributor?.contributor?.data?.attributes?.image?.data?.attributes?.url}`'
-          :url='contributor?.contributor?.data?.attributes?.href!' /> */}
+          <Contributor
+            key="1"
+            name="Kedos"
+            role="Voice Actor"
+            character="Kedos"
+            image={`https://yt3.ggpht.com/iLj3okZb4G3sKLhgdhubv-Ci6Qyb5Ha-_mxQeripIELZuRePPc1Ou-Rd8FwNRF_XsN1m8LksQQ=s88-c-k-c0x00ffffff-no-rj`}
+            url="https://www.youtube.com/channel/UCJylTAwdSFEOKEhnNOjk1Lg"
+          />
         </div>
       </div>
     </div>
